@@ -1,107 +1,341 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Gexayr's portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geghayr Melkonyan - CV</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<span class="avatar"><img src="images/avatar2.jpg"/></span>
-						<h1>This is my <strong>portfolio</strong>. The works presented here made by me, some with help my colleagues.</h1>
-						<ul class="icons">
-							<li><a target="_blank" href="https://www.linkedin.com/in/gexayr" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li class="twitter"><a target="_blank" href="https://twitter.com/gexayr" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a target="_blank" href="https://www.facebook.com/gexayr.melkonyan" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a target="_blank" href="mailto:gexayrmelkonyan@gmail.com" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-							<li><a target="_blank" href="https://bitbucket.org/gexayr" class="icon style2 fa-bitbucket"><span class="label">Bitbucket</span></a></li>
-							<li><a target="_blank" href="https://github.com/gexayr" class="icon style2 fa-github"><span class="label">Github</span></a></li>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #2c3e50;
+            background: white;
+            padding: 40px 50px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
 
-						</ul>
-					</header>
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+        }
 
-				<!-- Main -->
-					<section id="main">
+        .header h1 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
 
-						<!-- Thumbnails -->
-							<section class="thumbnails">
-								<div>
-									<div class="link" data-href="https://mebellux.shop/" data-name="mebellux.shop"></div>
-									<a href="images/fulls/mebellux.png">
-										<img src="images/thumbs/mebellux1.png" alt="" />
-									</a>
+        .header .title {
+            font-size: 14px;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
 
-									<div class="link" data-href="https://xn----8sblcaabjnwgzrg7bkaf.xn--p1ai/" data-name="утепление-коттеджа.рф"></div>
-									<a href="images/fulls/utipleniya.png">
-										<img src="images/thumbs/utipleniya.png" alt="" />
-									</a>
+        .contact-info {
+            font-size: 10px;
+            color: #555;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
 
-									<h5>website by wordpress</h5>
-									<a href="images/fulls/Selection_006.png">
-										<img src="images/thumbs/Selection_007.png" alt="" />
-									</a>
-								</div>
-								<div>
-									<div class="link" data-href="https://termocalc.ru/" data-name="termocalc.ru"></div>
-									<a href="images/fulls/termocalc.png">
-										<img src="images/thumbs/Selection_005.png" alt="" />
-									</a>
+        .contact-info span {
+            white-space: nowrap;
+        }
 
-									<h5>Auction for sale application, domains and sites</h5>
-									<a href="images/fulls/04.png">
-										<img src="images/thumbs/04.png" alt="" />
-									</a>
-								</div>
-								<div>
-									<h3>Website like Google Chrome extension</h3>
-									<a href="images/fulls/06.png">
-										<img src="images/thumbs/06.png" alt="" />
-									</a>
+        .section {
+            margin-bottom: 18px;
+        }
 
-									<h3>simple laravel project</h3>
-									<a href="images/fulls/03.png">
-										<img src="images/thumbs/03.png" alt="" />
-									</a>
+        .section-title {
+            font-size: 16px;
+            color: #3498db;
+            font-weight: 700;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #ecf0f1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-									<h3>Project by laravel</h3>
-									<a href="images/fulls/02.png">
-										<img src="images/thumbs/02.png" alt="" />
-									</a>
-								</div>
-							</section>
-					</section>
+        .profile-text {
+            font-size: 11px;
+            line-height: 1.5;
+            text-align: justify;
+        }
 
-				<!-- Footer -->
-					<footer id="footer">
-					</footer>
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 6px;
+            font-size: 10px;
+        }
 
-			</div>
+        .skill-row {
+            display: flex;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/main.js"></script>
-		<!-- Yandex.Metrika counter -->
-		<script type="text/javascript" >
-			(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-				m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        .skill-label {
+            font-weight: 600;
+            min-width: 140px;
+            color: #2c3e50;
+        }
 
-			ym(64483102, "init", {
-				clickmap:true,
-				trackLinks:true,
-				accurateTrackBounce:true,
-				webvisor:true
-			});
-		</script>
-		<noscript><div><img src="https://mc.yandex.ru/watch/64483102" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-		<!-- /Yandex.Metrika counter -->
-	</body>
+        .skill-items {
+            color: #555;
+        }
+
+        .experience-item {
+            margin-bottom: 14px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .company {
+            color: #3498db;
+        }
+
+        .date {
+            font-size: 10px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .experience-item ul {
+            margin-left: 18px;
+            margin-top: 4px;
+        }
+
+        .experience-item li {
+            font-size: 10px;
+            margin-bottom: 3px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .education-item {
+            font-size: 10px;
+        }
+
+        .degree {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .university {
+            color: #555;
+        }
+
+        .languages {
+            font-size: 10px;
+            color: #555;
+        }
+
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #2980b9;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+        }
+
+        @media print {
+            body {
+                padding: 30px 40px;
+            }
+
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<button class="download-btn" onclick="downloadCV()">Download PDF</button>
+
+<div class="header">
+    <h1>Geghayr Melkonyan</h1>
+    <div class="title">Senior Backend Engineer | PHP · Node.js · Go | Fintech & iGaming Systems</div>
+    <div class="contact-info">
+        <span>📍 Yerevan, Armenia</span>
+        <span>✉️ <a href="mailto:gexayrmelkonyan@gmail.com">gexayrmelkonyan@gmail.com</a></span>
+        <span>📱 <a href="tel:+37493113720">+374 93 11 37 20</a></span>
+        <span>💼 <a href="https://linkedin.com/in/gexayr" target="_blank">linkedin.com/in/gexayr</a></span>
+        <span>💻 <a href="https://github.com/Gexayr" target="_blank">github.com/Gexayr</a></span>
+        <span>🌐 <a href="https://gexayr.github.io" target="_blank">gexayr.github.io</a></span>
+        <span>💬 Telegram:<a href="https://t.me/gexayr"> @gexayr </a></span>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Profile</div>
+    <div class="profile-text">
+        Senior Backend Engineer with 9+ years architecting high-performance fintech and iGaming systems serving 100k+ concurrent users. Specialized in building fault-tolerant microservices and payment integrations that process millions of transactions with 99.9% uptime. Expert in PHP (Laravel, Yii2) and Node.js with proven track record of optimizing system performance by 30-50% through strategic architecture decisions and CI/CD automation. Passionate about writing maintainable code and mentoring development teams.
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Core Skills</div>
+    <div class="skills-grid">
+        <div class="skill-row">
+            <div class="skill-label">Expert:</div>
+            <div class="skill-items">PHP (Laravel, Yii2), MySQL, REST APIs, Git, Linux, Docker</div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-label">Advanced:</div>
+            <div class="skill-items">Node.js, Redis, PostgreSQL, WebSockets, Microservices Architecture, GitLab CI/CD</div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-label">Proficient:</div>
+            <div class="skill-items">React.js, Angular, Payment Gateway Integration (Stripe, PayPal), Message Queues, MongoDB</div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-label">Additional:</div>
+            <div class="skill-items">HTML5, CSS3, WordPress, OpenCart, PHPUnit, Jest, Nginx, AWS basics</div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Professional Experience</div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <div class="job-title">
+                Senior Backend Engineer – <span class="company">SmartBet / ABC Lab</span>
+            </div>
+            <div class="date">Jun 2021 – Present</div>
+        </div>
+        <ul>
+            <li>Architected and deployed high-traffic iGaming platform serving 100k+ concurrent players with 99.9% uptime during peak hours</li>
+            <li>Built Dockerized microservices architecture with GitLab CI/CD pipelines, reducing deployment time by 50% and eliminating production errors</li>
+            <li>Optimized API response times by 30% through database query optimization, Redis caching strategies, and efficient data structures</li>
+            <li>Integrated multiple payment gateways (Stripe, local providers) handling $2M+ monthly transaction volume with fraud detection</li>
+            <li>Mentored 3 junior developers on Laravel best practices, code reviews, and scalable architecture patterns</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <div class="job-title">
+                Backend Engineer – <span class="company">Ardshinbank</span>
+            </div>
+            <div class="date">Aug 2020 – Jun 2021</div>
+        </div>
+        <ul>
+            <li>Led backend development for core banking modules (card management, loan processing, customer accounts) serving 500k+ users</li>
+            <li>Integrated secure REST APIs with third-party financial services ensuring PCI DSS compliance and data encryption</li>
+            <li>Modernized legacy Yii2 codebase, improving transaction processing speed by 40% and reducing system errors by 60%</li>
+            <li>Implemented comprehensive logging and monitoring systems for real-time transaction tracking and fraud prevention</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <div class="job-title">
+                Backend Engineer – <span class="company">Globbing</span>
+            </div>
+            <div class="date">Sep 2019 – Aug 2020</div>
+        </div>
+        <ul>
+            <li>Developed large-scale e-commerce platform using Laravel, processing 50k+ daily orders for international logistics operations</li>
+            <li>Improved system uptime from 95% to 99.5% through database optimization and implementing robust error handling</li>
+            <li>Built RESTful APIs for mobile app integration and third-party logistics provider connections</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <div class="job-title">
+                Software Developer – <span class="company">World of Duty</span>
+            </div>
+            <div class="date">Aug 2018 – Jun 2019</div>
+        </div>
+        <ul>
+            <li>Built automated cryptocurrency trading bots using Node.js, executing 1000+ trades daily across multiple exchanges</li>
+            <li>Developed real-time analytics dashboards with Angular and WebSockets for live market data visualization</li>
+            <li>Enhanced data pipeline performance by 45% through optimized API polling and efficient data aggregation algorithms</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-header">
+            <div class="job-title">
+                Full-Stack Developer – <span class="company">Blessed Solutions</span>
+            </div>
+            <div class="date">Dec 2016 – Aug 2018</div>
+        </div>
+        <ul>
+            <li>Delivered 15+ full-stack web projects using Laravel, Yii2, and WordPress for diverse client requirements</li>
+            <li>Improved average client site performance by 35% through code optimization, caching, and CDN implementation</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Education</div>
+    <div class="education-item">
+        <span class="degree">B.Sc. in Information Systems Engineering</span> –
+        <span class="university">National University of Architecture and Construction of Armenia (NUACA)</span> |
+        <span class="date">2007 – 2011</span>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Languages</div>
+    <div class="languages">
+        <strong>English:</strong> B2 (Upper-Intermediate) | <strong>Russian:</strong> Native | <strong>Armenian:</strong> Native
+    </div>
+</div>
+<script>
+    function downloadCV() {
+        const link = document.createElement('a');
+        link.href = '/cv.pdf';
+        link.download = 'cv.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+</body>
 </html>
